@@ -1,5 +1,4 @@
-# SPA Authentication using Laravel 9 Sanctum, Vue 3 and Vite
-
+# Solutech Assessment
 ```
 composer install
 cp .env.example .env
@@ -9,4 +8,4 @@ npm install
 npm run dev
 php artisan serve
 ```
-# solutech-assessment
+
