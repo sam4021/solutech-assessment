@@ -12,6 +12,8 @@ const DahboardLayout = () => import('@/components/layouts/Default.vue')
 
 /* Authenticated Component */
 const Dashboard = () => import('@/components/Dashboard.vue')
+const Status = () => import('@/components/Status.vue')
+const Task = () => import('@/components/Tasks.vue')
 /* Authenticated Component */
 
 
@@ -48,9 +50,26 @@ const routes = [
                 meta: {
                     title: `Dashboard`
                 }
-            }
+            },
+            {
+                name: "status",
+                path: "/status",
+                component: Status,
+                meta: {
+                    title: `status`
+                }
+            },
+            {
+                name: "task",
+                path: "/task",
+                component: Task,
+                meta: {
+                    title: `task`
+                }
+            },
         ]
-    }
+    },
+
 ]
 
 const router = createRouter({

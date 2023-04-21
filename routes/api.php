@@ -17,3 +17,8 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+Route::prefix('v1')->namespace('App\Http\Controllers')->group(function(){
+    Route::apiResource('status', StatusController::class);
+    Route::apiResource('task', TaskController::class);
+    Route::post('/task/assign', 'TaskController@assign_user');
+});
